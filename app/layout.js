@@ -3,13 +3,18 @@ import "./globals.css";
 import dynamic from "next/dynamic";
 // import MainMenu from "./components/MainMenu";
 // import Header from "./components/Header";
-import { InventoryProvider } from "./context/InventoryContext";
+// import { InventoryProvider } from "./context/InventoryContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
 // Dynamic import to handle potential SSR issues
 const MainMenu = dynamic(() => import("./components/MainMenu"), { ssr: false });
 const Header = dynamic(() => import("./components/Header"), { ssr: false });
+const InventoryProvider = dynamic(
+  () => import("./context/InventoryContext").then((mod) => mod.InventoryProvider),
+  { ssr: false }
+);
+
 export const metadata = {
   title: "Pantry Helper",
   description: "For all your pantry needs.",
