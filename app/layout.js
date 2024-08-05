@@ -1,11 +1,15 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import MainMenu from "./components/MainMenu";
-import Header from "./components/Header";
+import dynamic from "next/dynamic";
+// import MainMenu from "./components/MainMenu";
+// import Header from "./components/Header";
 import { InventoryProvider } from "./context/InventoryContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Dynamic import to handle potential SSR issues
+const MainMenu = dynamic(() => import("./components/MainMenu"), { ssr: false });
+const Header = dynamic(() => import("./components/Header"), { ssr: false });
 export const metadata = {
   title: "Pantry Helper",
   description: "For all your pantry needs.",
