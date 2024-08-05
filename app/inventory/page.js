@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import InventoryList from "../components/InventoryList";
 import { useInventory } from "../context/InventoryContext";
 export default function InventoryPage() {

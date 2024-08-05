@@ -1,3 +1,6 @@
+"use client"
+
+//Fix being able to add nothing and it causing an error
 const AddItemModal = ({ addItem, itemName, setItemName, handleClose }) => {
   return (
     <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
