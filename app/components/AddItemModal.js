@@ -1,5 +1,4 @@
 "use client"
-
 //Fix being able to add nothing and it causing an error
 const AddItemModal = ({ addItem, itemName, setItemName, handleClose }) => {
   return (
