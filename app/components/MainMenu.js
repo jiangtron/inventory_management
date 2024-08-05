@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import LayoutGridIcon from "./icons/LayoutGridIcon";
 import PackageIcon from "./icons/PackageIcon";
